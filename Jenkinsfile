@@ -14,5 +14,9 @@ node {
          echo 'creating an image'
         docexec "/var/lib/jenkins/workspace/DockerDemo/"
     }
+ 
+  stage('git remove'){
+        sh 'rm -rf /var/lib/jenkins/workspace/DockerDemo/*'
+    }
     
 }
