@@ -12,7 +12,7 @@ node {
     
     stage('image create'){
          echo 'creating an image'
-        dockerexec "/var/lib/jenkins/workspace/DockerDemo/"
+        docexec "/var/lib/jenkins/workspace/DockerDemo/"
     }
     
 }
