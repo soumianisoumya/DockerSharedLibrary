@@ -12,10 +12,7 @@ node {
     
     stage('image create'){
          echo 'creating an image'
-        dockerexec "/var/lib/jenkins/workspace/sas2/"
+        dockerexec "/var/lib/jenkins/workspace/DockerDemo/"
     }
-    stage('instance creation'){
-        echo 'creating an instance'   
-        terraformexec "/var/lib/jenkins/workspace/sas2/terraform/"
-    }
+    
 }
