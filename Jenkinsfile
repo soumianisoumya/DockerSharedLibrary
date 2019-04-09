@@ -12,7 +12,7 @@ node {
     
     stage('image create'){
          echo 'creating an image'
-        docexec "/var/lib/jenkins/workspace/DockerDemo/"
+        dockerexec "/var/lib/jenkins/workspace/DockerDemo/"
     }
  
   stage('git remove'){
