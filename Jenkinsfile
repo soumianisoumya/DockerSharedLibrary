@@ -1,4 +1,4 @@
-@Library('my_shared_library')_
+@Library('my_library')_
 node {
  
     stage('Checkout external proj') {
