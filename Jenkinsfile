@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'docker images'
+                sh 'tomcat --version'
             }
         }
     }
