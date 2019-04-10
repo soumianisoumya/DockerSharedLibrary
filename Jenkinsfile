@@ -4,7 +4,7 @@ node {
  def mvnHome
    def app
    stage('Preparation') { 
-      git 'https://github.com/soumianisoumya/CarApplication.git'
+      git 'https://github.com/soumianisoumya/DockerSharedLibrary.git'
       mvnHome = tool 'mvn1'
    }
    
