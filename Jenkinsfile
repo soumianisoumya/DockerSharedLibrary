@@ -18,8 +18,8 @@ node {
   
   stage('Push Docker Image') {
       docker.withRegistry('https://registry.hub.docker.com','docker-credentials') {
-        app.push("${BUILD_NUMBER}")
-        app.push("latest")
+        dockerImage.push("${BUILD_NUMBER}")
+        dockerImage.push("latest")
       }
   } 
   
