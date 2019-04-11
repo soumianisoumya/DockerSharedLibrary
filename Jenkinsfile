@@ -18,12 +18,12 @@ node {
         dockerexec "/var/lib/jenkins/workspace/DockerDemo/"
     }
   
- /* stage('Push Docker Image') {
+  stage('Push Docker Image') {
       docker.withRegistry('https://registry.hub.docker.com','docker-credentials') {
         app.push("${BUILD_NUMBER}")
         app.push("latest")
       }
-  } */
+  } 
   
   stage('Run Container') {
       sh "sudo docker run -p 8085:8080 -d soumianisoumya/sharedlibrary"
