@@ -14,7 +14,7 @@ node {
   
    stage('image create'){
          echo 'creating an image'
-         dockerImage = dockerexec "/var/lib/jenkins/workspace/DockerDemo/"
+         dockerImage = dockerexec
         // dockerImage = docker.build("saumyaprashar/docker-demo:${BUILD_NUMBER}")
     }
   
