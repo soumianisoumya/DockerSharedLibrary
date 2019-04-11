@@ -26,7 +26,7 @@ node {
   } 
   
   stage('Run Container') {
-      sh "sudo docker run -p 8085:8080 -d soumianisoumya/sharedlibrary"
+      sh "sudo docker run -p 8085:8080 -d saumyaprashar/sharedlibrary"
   }
   stage('git remove'){
         sh 'rm -rf /var/lib/jenkins/workspace/DockerDemo/*'
