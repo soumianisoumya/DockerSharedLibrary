@@ -26,6 +26,10 @@ node {
         dockerImage.push("latest")
       }
   } 
+ 
+   stage('Run Container') {
+      sh "sudo docker run -p 8085:8080 -d saumyaprashar/docker-demo"
+  }
   
   stage('git remove'){
         sh 'rm -rf /var/lib/jenkins/workspace/DockerDemo/*'
