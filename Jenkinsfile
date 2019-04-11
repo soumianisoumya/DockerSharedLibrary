@@ -1,6 +1,8 @@
 @Library('my_library')_
 node {
  
+ def dockerImage
+ 
   stage('Checkout external proj') {
         git branch: 'master',
             credentialsId: 'github',
@@ -12,7 +14,7 @@ node {
   
    stage('image create'){
          echo 'creating an image'
-       def dockerImage = dockerexec "/var/lib/jenkins/workspace/DockerDemo/"
+         dockerImage = dockerexec "/var/lib/jenkins/workspace/DockerDemo/"
         // dockerImage = docker.build("saumyaprashar/docker-demo:${BUILD_NUMBER}")
     }
   
