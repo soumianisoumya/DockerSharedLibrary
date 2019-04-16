@@ -1,7 +1,7 @@
 @Library('my_library')_
 node {
  
- def credentials = 'docker-cred'
+ def credentials = 'jendocker'
   
  def dockerImage
  def mvnHome
