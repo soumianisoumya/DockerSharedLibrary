@@ -1,10 +1,8 @@
 @Library('my_library')_
 node {
  
- environment{
-   credentials = 'docker-cred'
- }
- 
+ def credentials = 'docker-cred'
+  
  def dockerImage
  def mvnHome
    def app
