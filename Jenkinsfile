@@ -1,6 +1,10 @@
 @Library('my_library')_
 node {
  
+ environment{
+   credentials = 'docker-cred'
+ }
+ 
  def dockerImage
  def mvnHome
    def app
@@ -21,7 +25,7 @@ node {
     }
   
   stage('Push Docker Image') {
-      docker.withRegistry('https://registry.hub.docker.com','docker-cred') {
+      docker.withRegistry('https://registry.hub.docker.com',credentials) {
         dockerImage.push("${BUILD_NUMBER}")
         dockerImage.push("latest")
       }
